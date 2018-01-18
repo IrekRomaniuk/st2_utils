@@ -9,4 +9,3 @@ parameters:
     description: "A comma delimited string of a list of hosts where the remote command will be executed."
     required: false 
     default: "localhost"
-    position: 1
