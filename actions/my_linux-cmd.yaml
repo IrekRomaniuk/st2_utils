@@ -9,22 +9,18 @@ parameters:
     description: "A comma delimited string of a list of hosts where the remote command will be executed."
     required: false 
     default: "localhost"
-    position: 1
   username:
     type: string
     description: "user."
     required: false 
     default: "user"
-    position: 2
   password:
     type: string
     description: "pass."
     required: false 
     default: "password"
-    position: 3
   cmd:
     type: string
     description: "Command to be run on remote"
     required: false 
     default: "uptime"   
-    position: 4
