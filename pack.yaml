@@ -1,0 +1,10 @@
+---
+ref: st2_utils
+name: st2_utils
+description: A simple pack containing examples of sensor, rule, and action.
+keywords:
+    - utils
+    - tests
+version: 0.1.0
+author: Irek Romaniuk
+email: irek.romaniuk@gmail.com
