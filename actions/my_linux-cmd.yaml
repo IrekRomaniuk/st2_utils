@@ -1,0 +1,12 @@
+---
+name: my_linux-cmd 
+runner_type: remote-shell-cmd
+description: Run command on remote Linux  
+enabled: true
+parameters:
+  hosts:
+    type: string
+    description: "A comma delimited string of a list of hosts where the remote command will be executed."
+    required: false 
+    default: "localhost"
+    position: 1
