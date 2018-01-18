@@ -8,4 +8,4 @@ trigger:
 action:
     ref: st2_utils.my_linux-cmd
     parameters:
-        hosts: "{{trigger.payload.hosts}}"
+        hosts: "{{trigger.hosts}}"

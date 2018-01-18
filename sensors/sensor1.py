@@ -16,7 +16,7 @@ class HelloSensor(Sensor):
         while not self._stop:   
             self._logger.debug('HelloSensor dispatching trigger...')
             count = self.sensor_service.get_value('st2_utils.count') or 0
-            payload = {'greeting': '1.1.1.1,2.2.2.2', 'count': int(count) + 1}
+            payload = {'hosts': '1.1.1.1,2.2.2.2', 'count': int(count) + 1}
             self.sensor_service.dispatch(trigger='st2_utils.event1', payload=payload)
             self.sensor_service.set_value('st2_utils.count', payload['count'])
             eventlet.sleep(60)
