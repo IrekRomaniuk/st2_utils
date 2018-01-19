@@ -1,6 +1,6 @@
 ---
-    name: "hook_linux-cmd"
-    pack: "st2_utlis"
+    name: hook_linux-cmd
+    pack: st2_utlis
     description: "Get targets, credentials and command to execute remotely"
     enabled: true
 
