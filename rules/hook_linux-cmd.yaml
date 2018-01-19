@@ -1,0 +1,18 @@
+---
+    name: "hook_linux-cmd"
+    pack: "st2_utlis"
+    description: "Get targets, credentials and command to execute remotely"
+    enabled: true
+
+    trigger:
+        type: "core.st2.webhook"
+        parameters:
+            url: "netpro"       
+
+    action:
+        ref: "st2_utils.my_linux-cmd"
+        parameters:
+            hosts: "{{trigger.body.hosts}}"
+            username: "{{trigger.body.user}}"
+            password: "{{trigger.body.pass}}"
+            cmd: "{{trigger.body.cmd}}"

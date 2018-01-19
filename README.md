@@ -14,3 +14,4 @@ real    1m15.943s
 user    0m0.700s
 sys     0m0.076s
 ```
+st2 rule disable st2_utils.on_hello_event1
