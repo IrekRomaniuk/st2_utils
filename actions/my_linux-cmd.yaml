@@ -23,4 +23,9 @@ parameters:
     type: string
     description: "Command to be run on remote"
     required: false 
-    default: "uptime"   
+    default: "uptime" 
+  timeout:
+    type: integer
+    description: "Timeout"
+    required: false 
+    default: 1    
