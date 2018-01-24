@@ -1,7 +1,7 @@
 ---
 name: on_hello_event1
 pack: st2_utils
-description: Sample rule firing on st2_utils.event1.
+description: Sample rule firing on st2_utils.event1
 enabled: false
 trigger:
     type: st2_utils.event1

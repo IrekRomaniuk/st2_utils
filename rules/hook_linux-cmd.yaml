@@ -1,7 +1,7 @@
 ---
 name: hook_linux-cmd
 pack: st2_utils
-description: "Get targets, credentials and command to execute remotely"
+description: "Collect params to execute remotely"
 enabled: true
 trigger:
     type: core.st2.webhook
