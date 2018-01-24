@@ -2,7 +2,9 @@
     chain:
         -
             name: "my_linux-cmd"
-            ref: st2_utils.my_linux-cmd                       
+            ref: st2_utils.my_linux-cmd  
+            on-success: "stdout2file"
+            on-failure: "stdout2file"                     
         -
             name: "stdout2file"
             ref: "core.local"

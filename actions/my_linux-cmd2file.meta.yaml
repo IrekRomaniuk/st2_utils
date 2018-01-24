@@ -1,6 +1,6 @@
 ---
 # Action definition metadata
-name: "stdout2file"
+name: "my_linux-cmd2file"
 description: "Action Chain workflow passing stdout to file"
 # `runner_type` identifies the runner
 runner_type: "action-chain"
