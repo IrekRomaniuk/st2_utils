@@ -1,0 +1,20 @@
+---
+    chain:
+        -
+            name: "my_linux-cmd"
+            ref: st2_utils.my_linux-cmd            
+            on-success: "c2"
+            on-failure: "c2"
+        -
+            name: "c2"
+            ref: "core.local"
+            parameters:
+                cmd: "\"{{my_linux-cmd.stdout}}.\">> ~/st2_utils.my_linux-cmd.out"
+            on-success: "c3"
+            on-failure: "c4"
+        -
+            name: "c4"
+            ref: "core.local"
+            parameters:
+                cmd: "echo fail c4"
+    default: "my_linux-cmd"
