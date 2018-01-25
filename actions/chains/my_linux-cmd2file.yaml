@@ -5,8 +5,8 @@
             ref: st2_utils.my_linux-cmd
             parameters:
                 hosts: "{{hosts}}"
-                username: "{{user}}"
-                password: "{{pass}}"
+                username: "{{username}}"
+                password: "{{password}}"
                 cmd: "{{cmd}}"
             on-success: "succcess2file"
             on-failure: "failure2file"                     
