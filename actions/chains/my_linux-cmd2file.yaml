@@ -8,7 +8,7 @@
                 username: "{{user}}"
                 password: "{{pass}}"
                 cmd: "{{cmd}}"
-            on-success: "succcess2filee"
+            on-success: "succcess2file"
             on-failure: "failure2file"                     
         -
             name: "succcess2file"
