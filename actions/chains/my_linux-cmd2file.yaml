@@ -4,12 +4,20 @@
             name: "my_linux-cmd"
             ref: st2_utils.my_linux-cmd
             parameters:
-                my_linux-cmd_input: "{{shields}}"
-            on-success: "stdout2file"
-            on-failure: "stdout2file"                     
+                hosts: "{{hosts}}"
+                username: "{{user}}"
+                password: "{{pass}}"
+                cmd: "{{cmd}}"
+            on-success: "succcess2filee"
+            on-failure: "failure2file"                     
         -
-            name: "stdout2file"
+            name: "succcess2file"
             ref: "core.local"
             parameters:
-                cmd: "\"{{my_linux-cmd.stdout}}.\">> ~/st2_utils.my_linux-cmd.out"     
+                cmd: "\"{{my_linux-cmd.stdout}}.\">> ~/st2_utils.my_linux-cmd-success.out" 
+        -
+            name: "failure2file"
+            ref: "core.local"
+            parameters:
+                cmd: "\"{{my_linux-cmd.stdout}}.\">> ~/st2_utils.my_linux-cmd-failure.out"             
     default: "my_linux-cmd"
