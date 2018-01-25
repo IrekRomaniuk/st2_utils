@@ -1,8 +1,8 @@
 ---
     chain:
         -
-            name: "my_linux-cmd"
-            ref: st2_utils.my_linux-cmd
+            name: "my_linux_cmd"
+            ref: st2_utils.my_linux_cmd
             parameters:
                 hosts: "{{hosts}}"
                 username: "{{username}}"
@@ -14,10 +14,10 @@
             name: "success2file"
             ref: "core.local"
             parameters:
-                cmd: "echo {{my_linux-cmd.stdout}} >> ~/st2_utils.my_linux-cmd-success.out" 
+                cmd: "echo {{my_linux_cmd.stdout}} >> ~/st2_utils.my_linux_cmd-success.out" 
         -
             name: "failure2file"
             ref: "core.local"
             parameters:
-                cmd: "echo {{my_linux-cmd.error}} >> ~/st2_utils.my_linux-cmd-failure.out"             
-    default: "my_linux-cmd"
+                cmd: "echo {{my_linux_cmd.error}} >> ~/st2_utils.my_linux_cmd-failure.out"             
+    default: "my_linux_cmd"

@@ -1,5 +1,5 @@
 ---
-name: my_linux-cmd 
+name: my_linux_cmd 
 runner_type: remote-shell-cmd
 description: Run command on remote Linux  
 enabled: true
