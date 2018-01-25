@@ -19,5 +19,5 @@
             name: "failure2file"
             ref: "core.local"
             parameters:
-                cmd: "\"{{my_linux-cmd.stdout}}.\">> ~/st2_utils.my_linux-cmd-failure.out"             
+                cmd: "\"{{my_linux-cmd.error}}.\">> ~/st2_utils.my_linux-cmd-failure.out"             
     default: "my_linux-cmd"
