@@ -1,0 +1,11 @@
+---
+name: sensor1_event1
+pack: st2_utils
+description: Sample rule firing on st2_utils.event1
+enabled: false
+trigger:
+    type: st2_utils.event1
+action:
+    ref: st2_utils.my_linux-cmd
+    parameters:
+        hosts: "{{trigger.hosts}}"

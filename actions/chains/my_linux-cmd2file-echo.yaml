@@ -1,0 +1,23 @@
+---
+    chain:
+        -
+            name: "my_linux-cmd"
+            ref: st2_utils.my_linux-cmd
+            parameters:
+                hosts: "{{hosts}}"
+                username: "{{username}}"
+                password: "{{password}}"
+                cmd: "{{cmd}}"
+            on-success: "success2file"
+            on-failure: "failure2file"                     
+        -
+            name: "success2file"
+            ref: "core.local"
+            parameters:
+                cmd: "echo success" 
+        -
+            name: "failure2file"
+            ref: "core.local"
+            parameters:
+                cmd: "echo failure"             
+    default: "my_linux-cmd"
