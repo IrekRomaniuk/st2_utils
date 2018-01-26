@@ -6,6 +6,6 @@ enabled: false
 trigger:
     type: st2_utils.event1
 action:
-    ref: st2_utils.my_linux_cmd
+    ref: st2_utils.cmd
     parameters:
         hosts: "{{trigger.hosts}}"

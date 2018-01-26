@@ -1,11 +1,11 @@
 ---
 # Action definition metadata
-name: "my_linux_cmd2file"
+name: "cmd2file"
 description: "Run command on remote Linux and write output to file"
 # `runner_type` identifies the runner
 runner_type: "action-chain"
 # `entry_point` path to the ActionChain definition file, relative to the pack's action directory.
-entry_point: "chains/my_linux_cmd2file.yaml"
+entry_point: "chains/chain_cmd2file.yaml"
 enabled: true
 parameters:  
   hosts:
