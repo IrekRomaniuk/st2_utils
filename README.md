@@ -6,7 +6,25 @@ Experimenting with concurrent and parallel tasks on multiple targets
 
 - /api/v1/webhooks/netpro - webhook
 - st2_utils.cmd - Run command on remote Linux (parallel ssh)
-- st2_utils.chain_cmd2file - Action chain to run command on remote Linux and write output to file
+- st2_utils.chain_cmd2file - Action chain to run command on remote Linux and write output to file (output will have "succeeded" and "failed" IPs based on json result)
+```
+"result": {
+            "1.1.1.1": {
+                "succeeded": true,
+                "failed": false,
+                "return_code": 0,
+                "stderr": "",
+                "stdout": " 15:06:09 up 37 days,  2:44, load average: 0.00, 0.00, 0.00"
+            },
+            "2.2.2.2": {
+                "succeeded": true,
+                "failed": false,
+                "return_code": 0,
+                "stderr": "",
+                "stdout": " 15:06:10 up 53 days,  4:16, load average: 0.54, 0.28, 0.16"
+            }
+} 
+```
 
 
 ## Using the pack - Under development
