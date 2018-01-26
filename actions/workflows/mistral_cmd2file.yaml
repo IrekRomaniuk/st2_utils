@@ -22,7 +22,7 @@ st2_utils.mistral_cmd2file:
             on-error:
                 - notify           
         cmd2file:
-            action: core.local cmd="echo task2:cmd2file"
+            action: cmd= echo "<% task(run_cmd).result.stdout %> >> ~/st2_utils.cmd-success.out"
             publish:
                 stdout: <% task(cmd2file).result.stdout %>
                 stderr: <% task(cmd2file).result.stderr %>  
