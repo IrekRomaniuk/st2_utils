@@ -1,6 +1,6 @@
 version: '2.0'
 
-examples.mistral-basic:
+st2_utils.mistral-cmd2file:
     description: A basic workflow that runs an arbitrary linux command.
     type: direct
     input:
@@ -13,7 +13,7 @@ examples.mistral-basic:
         stdout: <% $.stdout %>
     tasks:
         task1:
-            action: core.local cmd=<% $.cmd %> hosts=<% $.hosts %> username=<% $.username %> password=<% $.password %> timeout=<% $.timeout %>
+            action: st2_utils.cmd cmd=<% $.cmd %> hosts=<% $.hosts %> username=<% $.username %> password=<% $.password %> timeout=<% $.timeout %>
             publish:
                 stdout: <% task(task1).result.stdout %>
                 stderr: <% task(task1).result.stderr %>
