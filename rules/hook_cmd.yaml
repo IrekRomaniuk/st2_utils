@@ -8,7 +8,7 @@ trigger:
     parameters:
         url: "netpro"       
 action:
-    ref: st2_utils.cmd2file
+    ref: st2_utils.chain_cmd2file
     parameters:
         hosts: "{{trigger.body.hosts}}"
         username: "{{trigger.body.user}}"

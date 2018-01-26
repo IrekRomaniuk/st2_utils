@@ -1,6 +1,6 @@
 ---
 # Action definition metadata
-name: "cmd2file"
+name: "chain_cmd2file"
 description: "Run command on remote Linux and write output to file"
 # `runner_type` identifies the runner
 runner_type: "action-chain"

@@ -1,5 +1,5 @@
 ---
-description: Run a remote linux command
+description: Run command on remote Linux
 enabled: true
 runner_type: mistral-v2
 entry_point: workflows/mistral_cmd2file.yaml
