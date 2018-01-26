@@ -17,4 +17,10 @@ st2_utils.mistral_cmd2file:
             publish:
                 stdout: <% task(run_cmd).result.stdout %>
                 stderr: <% task(run_cmd).result.stderr %>
-            
+            on-complete:
+                - cmd2file        
+        cmd2file:
+            action: core.local cmd = "echo task2:cmd2file"
+            publish:
+                stdout: <% task(cmd2file).result.stdout %>
+                stderr: <% task(cmd2file).result.stderr %>        
