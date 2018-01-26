@@ -17,7 +17,7 @@ st2_utils.mistral_cmd2file:
             publish:
                 stdout: <% task(run_cmd).result.stdout %>
                 stderr: <% task(run_cmd).result.stderr %>
-            on-complete:
+            on-success:
                 - cmd2file 
             on-error:
                 - notify           
