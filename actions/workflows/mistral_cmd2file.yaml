@@ -12,8 +12,17 @@ st2_utils.mistral_cmd2file:
     output:
         stdout: <% $.stdout %>
     tasks:
-        task1:
+        run_cmd:
             action: st2_utils.cmd cmd=<% $.cmd %> hosts=<% $.hosts %> username=<% $.username %> password=<% $.password %> timeout=<% $.timeout %>
             publish:
-                stdout: <% task(task1).result.stdout %>
-                stderr: <% task(task1).result.stderr %>
+                stdout: <% task(run_cmd).result.stdout %>
+                stderr: <% task(run_cmd).result.stderr %>
+        on-complete:
+           - cmd2file        
+        cmd2file:
+            action: core.local 
+            input: 
+              cmd="echo <% task(run_cmd).result.stdout %> >> ~/st2_utils.cmd-success.out"
+            publish:
+                stdout: <% task(cmd2file).result.stdout %>
+                stderr: <% task(cmd2file).result.stderr %>        
