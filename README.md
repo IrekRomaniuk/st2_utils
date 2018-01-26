@@ -39,7 +39,7 @@ sys     0m0.076s
 st2 rule disable st2_utils.on_hello_event1
 
 $ curl -k https://st2/api/v1/webhooks/netpro -d '{"hosts":"1.1.1.1,2.2.2.2", "user": "user", "pass": "password", "cmd":"uptime"}' -H 'Content-Type: application/json' -H 'St2-Api-Key: key'
-
+st2 run st2_utils.cmd cmd=uptime hosts="1.1.1.1,2.2.2.2" password="pass" username=user
 st2 run st2_utils.chain_cmd2file cmd=uptime hosts="1.1.1.1,2.2.2.2" password="pass" username=user
 st2 run st2_utils.mistral_cmd2file cmd=uptime hosts="1.1.1.1,2.2.2.2" password="pass" username=user
 ```
