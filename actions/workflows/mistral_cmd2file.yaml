@@ -22,7 +22,7 @@ st2_utils.mistral_cmd2file:
         cmd2file:
             action: core.local 
             input: 
-              cmd= echo "task2:cmd2file"
+              cmd = "echo task2:cmd2file"
             publish:
                 stdout: <% task(cmd2file).result.stdout %>
                 stderr: <% task(cmd2file).result.stderr %>        
