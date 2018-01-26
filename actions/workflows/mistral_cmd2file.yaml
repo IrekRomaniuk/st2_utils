@@ -13,7 +13,7 @@ examples.mistral-basic:
         stdout: <% $.stdout %>
     tasks:
         task1:
-            action: st2_utils.my_linux_cmd cmd=<% $.cmd %> hosts=<% $.hosts %> username=<% $.username %> password=<% $.password %> timeout=<% $.timeout %>
+            action: st2_utils.cmd cmd=<% $.cmd %> hosts=<% $.hosts %> username=<% $.username %> password=<% $.password %> timeout=<% $.timeout %>
             publish:
                 stdout: <% task(task1).result.stdout %>
                 stderr: <% task(task1).result.stderr %>
