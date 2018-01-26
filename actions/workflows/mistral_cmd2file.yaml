@@ -29,4 +29,4 @@ st2_utils.mistral_cmd2file:
         notify:
             action: core.local
             input:
-                cmd: "printf '<% $.status_message %>'              
+                cmd: "printf '<% $.status_message %>'"          
