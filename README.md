@@ -1,5 +1,7 @@
 # my st2 Pack with utils and tests
 
+Experimenting with concurrent and parallel tasks on multiple targets
+
 ## Actions
 
 - /api/v1/webhooks/netpro - webhook
