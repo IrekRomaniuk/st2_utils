@@ -1,8 +1,8 @@
 ---
     chain:
         -
-            name: "my_linux-cmd"
-            ref: st2_utils.my_linux-cmd
+            name: "my_linux_cmd"
+            ref: st2_utils.my_linux_cmd
             parameters:
                 hosts: "{{hosts}}"
                 username: "{{username}}"
@@ -20,4 +20,4 @@
             ref: "core.local"
             parameters:
                 cmd: "echo failure"             
-    default: "my_linux-cmd"
+    default: "my_linux_cmd"
