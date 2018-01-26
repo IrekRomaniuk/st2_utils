@@ -14,10 +14,10 @@
             name: "success2file"
             ref: "core.local"
             parameters:
-                cmd: "echo {{cmd.stdout}} >> ~/st2_utils.cmd-success.out" 
+                cmd: "echo {{cmd}} >> ~/st2_utils.cmd-success.out" 
         -
             name: "failure2file"
             ref: "core.local"
             parameters:
-                cmd: "echo {{cmd.error}} >> ~/st2_utils.cmd-failure.out"             
+                cmd: "echo {{cmd}} >> ~/st2_utils.cmd-failure.out"             
     default: "cmd"
