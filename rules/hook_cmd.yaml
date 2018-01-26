@@ -1,5 +1,5 @@
 ---
-name: hook_linux_cmd
+name: hook_cmd
 pack: st2_utils
 description: "Collect params to execute remotely"
 enabled: true

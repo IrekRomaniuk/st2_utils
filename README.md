@@ -23,14 +23,14 @@ st2 action list --pack=st2_utils
 
 ```
 st2 rule-enforcement list --rule=st2_utils.on_hello_event1
-st2 rule-enforcement list --rule=st2_utils.hook_linux_cmd
+st2 rule-enforcement list --rule=st2_utils.hook_cmd
 tail -f /var/log/st2/st2rulesengine.log
 ```
 
 ### Testing
 
 ```
-$ time st2 run st2-utils.my_linux_cmd hosts="1.1.1.1,2.2.2.2,3.3.3.3,1.1.1.1,2.2.2.2,3.3.3.3" username=user password='password' cmd=uptime timeout=2
+$ time st2 run st2-utils.cmd hosts="1.1.1.1,2.2.2.2,3.3.3.3,1.1.1.1,2.2.2.2,3.3.3.3" username=user password='password' cmd=uptime timeout=2
 ...
 real    1m15.943s
 user    0m0.700s
@@ -40,5 +40,5 @@ st2 rule disable st2_utils.on_hello_event1
 
 $ curl -k https://st2/api/v1/webhooks/netpro -d '{"hosts":"1.1.1.1,2.2.2.2", "user": "user", "pass": "password", "cmd":"uptime"}' -H 'Content-Type: application/json' -H 'St2-Api-Key: key'
 
-st2 run st2_utils.my_linux_cmd2file cmd=uptime hosts="1.1.1.1,2.2.2.2" password="pass" username=user
+st2 run st2_utils.cmd2file cmd=uptime hosts="1.1.1.1,2.2.2.2" password="pass" username=user
 ```
