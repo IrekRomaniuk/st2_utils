@@ -26,7 +26,7 @@ Experimenting with concurrent and parallel tasks on multiple targets
 } 
 ```
 - st2_utils.chain_cmd2cmd - Action chain to re-run command with different params on failed remote targets
-- st2_utils.chain_cmd2cmd - Action chain to re-run command with different params on failed remote targets
+
 
 
 ## Using the pack - Under development
