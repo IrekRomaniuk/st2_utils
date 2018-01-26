@@ -18,15 +18,16 @@ st2_utils.mistral_cmd2file:
                 stdout: <% task(run_cmd).result.stdout %>
                 stderr: <% task(run_cmd).result.stderr %>
             on-success:
-                - cmd2file 
+                - s2file 
             on-error:
-                - notify           
-        cmd2file:
+                - e2file           
+        s2file:
             action: core.local cmd="echo <% task(run_cmd).result.stdout %> >> ~/st2_utils.cmd-success.out"
             publish:
-                stdout: <% task(cmd2file).result.stdout %>
-                stderr: <% task(cmd2file).result.stderr %>  
-        notify:
-            action: core.local
-            input:
-                cmd: "printf '<% $.status_message %>'"          
+                stdout: <% task(s2file).result.stdout %>
+                stderr: <% task(s2file).result.stderr %>  
+        e2file:
+            action: core.local cmd="echo <% task(run_cmd).result.stdout %> >> ~/st2_utils.cmd-failure.out"
+            publish:
+                stdout: <% task(e2file).result.stdout %>
+                stderr: <% task(e2file).result.stderr %>          
