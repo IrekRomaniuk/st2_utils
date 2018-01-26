@@ -6,7 +6,7 @@ Experimenting with concurrent and parallel tasks on multiple targets
 
 - /api/v1/webhooks/netpro - webhook
 - st2_utils.cmd - Run command on remote Linux (parallel ssh)
-- st2_utils.cmd2file - Action chain to run command on remote Linux and write output to file ( 'dict object' has no attribute 'stdout')
+- st2_utils.chain_cmd2file - Action chain to run command on remote Linux and write output to file ( 'dict object' has no attribute 'stdout')
 
 
 ## Using the pack - Under development
