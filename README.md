@@ -5,7 +5,9 @@ Experimenting with concurrent and parallel tasks on multiple targets
 ## Actions
 
 - /api/v1/webhooks/netpro - webhook
+- gost2netpro - Go program to [post json to st2 webhook] (https://github.com/IrekRomaniuk/gost2netpro)
 - st2_utils.cmd - Run command on remote targets (parallel ssh)
+- st2_utils.mistral_cmd2file - Mistral workflow to run command on remote targets and write output to file
 - st2_utils.chain_cmd2file - Action chain to run command on remote targets and write output to file (or two files with "succeeded" and "failed" IPs  based on JSON result)
 ```
 "result": {
